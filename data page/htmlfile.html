@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="shortcut icon" href="Logo_IIITL.png"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<body>
+    <video autoplay loop muted plays-inline class="bacv">
+        <source src="video.mp4" type="video/mp4">
+    </video>
+    <div class="container" style="background-color: rgba(255, 255, 255, 0.114); border:1px solid rgba(255, 255, 255, 0.1);box-shadow: 0 0 40px rgba(0, 0, 0, 0.65);">
+        <div class="navbar" >
+            <div class="logo">
+                <a href="https://iiitl.ac.in/" class="logo" target="_blank">
+                    <img src="Logopic.png" width="90px" alt="logo">
+                </a>
+                <span class="logoname">Students-IIITL</span>
+            </div>
+            <div class="searchbox" >
+                <form action="#">
+                    <input type="text" placeholder="Search Here">
+                    <button><span class="material-icons-round" style=" position:absolute; font-size: 30px; padding:3px; bottom:0px;">
+                        search
+                        </span> </button>  
+                </form>
+            </div>
+            <div class="navitem">
+                <div class="icons">
+                    <ul>
+                        <li><button><span class="material-icons-round" style="font-size: 20px;">email</span></button></li>
+                        <li><span class="material-icons-round" style="font-size: 20px;">notifications</span></li>
+                    </ul>
+                </div>
+                <div class="account">
+                    <img src="profilepic.jpg" width="40px" height="40px" id="pic" alt="">
+                    <span class="name" style="bottom:55px" >ABCD XYZ</span>
+                    <span class="username" style="padding:10px;">l2022abcd</span>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar bg">
+            <ul>
+                <li class="dashboard">
+                    <button><span class="material-icons-round">dashboard</span></button>
+                    <a href="#">Dashboard</a>  
+                    <div class="togglebtn"></div>  
+                </li>
+                <div class="toggle" >
+                    <li>
+                        <button><span class="material-icons-round">fact_check</span></button>
+                        <a href="#">Attendance</a>
+                    </li>
+                    <li>
+                        <button><span class="material-icons-round">bar_chart</span></button>
+                        <a href="#">Result</a>
+                    </li>
+
+                    <li><button><span class="material-icons-round">class</span></button>
+                        <a href="#">Syllabus</a>
+                    </li>
+                    <li>
+                        <button><span class="material-icons-round">event_note</span></button>
+                        <a href="#">Time Table</a>
+                    </li>
+                    <li>
+                        <button><span class="material-icons-round">event</span></button>
+                        <a href="#">Holiday Calendar</a>
+                    </li>  
+                </div>
+            </ul>
+        </div>
+        <div class="header">
+            <div class="tittle" style="background:none;">
+                <h1>Your Profile</h1>
+                <h4>Hi, ABCD here's your profile.</h4>
+            </div>
+        </div>
+        <div class="card1 row-1">
+            <span class="clock">
+                <h2 class="time" id="tm">00:00</h2>
+                <span class="details">
+                    <h3 class="ampm" id="apm">-M</h3>
+                    <h3 class="sec" id="sc">00</h3>
+                </span>
+                <h4 class="date">
+                    <span class="month" id="mth">---</span>
+                    <span class="dayofweek" id="dow">&nbsp &nbsp---</span>
+                    <span class="day" id="dy">&nbsp &nbsp-</span>
+                </h4>
+            </span>
+        </div>
+        <div class="card2 row-1" >
+            <div class="head">
+                <h1>Your Assignments</h1>
+            </div>
+            <div class="bd">
+                <div class="sub1">sub1</div>
+                <div class="sub2">sub2</div>
+                <div class="sub3">sub3</div>
+            </div>
+        </div>
+        <span class="graph row-2" >
+            <div class="status">
+                <h2>Results</h2>
+            </div>
+            <span class="chart" >
+                <span class="box" >
+                    <li style="--i:0"><span class="text">sub1</span></li>
+                    <li style="--i:1"><span class="text">sub2</span></li>
+                    <li style="--i:2"><span class="text">sub3</span></li>
+                    <li style="--i:3"><span class="text">sub4</span></li>
+                    <li style="--i:4"><span class="text">sub5</span></li>
+                    <li style="--i:5"><span class="text">sub6</span></li>
+                </span>
+                <ul>
+                    <li>100</li>
+                    <li>80</li>
+                    <li>60</li>
+                    <li>40</li>
+                    <li>20</li>
+                    <li>0</li>
+                </ul>
+            </span>
+        </span>
+        <div class="card3 row-2">
+            <div class="form-group p-2" id="nts"style="background:none;">
+                <h1>Notes</h1>
+                <textarea id="nt" placeholder="Enter here" class="form-control ntsf" style="border: 3px white; color: white;"></textarea>
+                <div id="ntsAddButton" style="background:none;">
+                    <button onclick="addNew()" class="btn btn-sm text-center" style="background:white; color: rgb(0, 0, 0); font-size: 12px; font-weight: 800;">+</button>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

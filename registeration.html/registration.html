@@ -1,0 +1,205 @@
+<html>
+
+<head>
+    <title> Validate Password </title>
+    <link rel="shortcut icon" href="Logo_IIITL.png"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+</head>
+<script>
+    function validateForm() {
+        var pw1 = document.getElementById("pswd1").value;
+        var pw2 = document.getElementById("pswd2").value;
+        var name1 = document.getElementById("fname").value;
+        var name2 = document.getElementById("lname").value;
+
+        if (name1 == "") {
+            document.getElementById("blankMsg").innerHTML = "**Fill the first name";
+            return false;
+        }
+
+        if (!isNaN(name1)) {
+            document.getElementById("blankMsg").innerHTML = "**Only characters are allowed";
+            return false;
+        }
+
+
+
+        if (!isNaN(name2)) {
+            document.getElementById("charMsg").innerHTML = "**Only characters are allowed";
+            return false;
+        }
+
+        if (pw1 == "") {
+            document.getElementById("message1").innerHTML = "**Fill the password please!";
+            return false;
+        }
+
+        if (pw2 == "") {
+            document.getElementById("message2").innerHTML = "**Enter the password please!";
+            return false;
+        }
+
+        if (pw1.length < 8) {
+            document.getElementById("message1").innerHTML = "**Password length must be atleast 8 characters";
+            return false;
+        }
+
+        if (pw1.length > 15) {
+            document.getElementById("message1").innerHTML = "**Password length must not exceed 15 characters";
+            return false;
+        }
+
+        if (pw1 != pw2) {
+            document.getElementById("message2").innerHTML = "**Passwords are not same";
+            return false;
+        } else {
+            alert("Your password created successfully");
+            document.write("Registration form has been submitted successfully");
+        }
+    }
+</script>
+
+<body>
+    <center>
+
+        <h1> Registration Page To Student Portal </h1> <br><br>
+        <div class="pr">
+            <form onsubmit="return validateForm()">
+
+
+                <td> Full Name* </td>
+                <input type="text" id="fname" pattern="[A-Za-z]+$" value="" placeholder="enter first name">
+                <span id="blankMsg" style="color:red"> </span> <br><br>
+
+
+                <td> Last Name </td>
+                <input type="text" id="lname" pattern="[A-Za-z]+$" value="" placeholder="enter last name">
+                <span id="charMsg" style="color:red"> </span> <br><br>
+
+
+                <td>Email</td>
+                <input type="email" id="email" pattern=" ([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$"
+                    size="19" required placeholder="enter your email"><br><br>
+
+
+                <td> Create Password* </td>
+                <input type="password" id="pswd1" value="" placeholder="enter password">
+                <span id="message1" style="color:red"> </span> <br><br>
+
+
+                <td> Confirm Password* </td>
+                <input type="password" id="pswd2" value="" placeholder="confirm password">
+                <span id="message2" style="color:red"> </span> <br><br>
+
+
+                <input type="submit" value="SIGN UP" class="btn btn-primary">
+
+                <!-- <button type="reset" value="Reset">Reset</button> -->
+            </form>
+        </div>
+    </center>
+
+    <style>
+        body{
+            background-image: url('img/pic44.png');
+            /* display: inline-block; */
+            background-repeat: no-repeat;
+         /* border-image-width: 5000px ; */
+         object-fit: cover;
+         background-size:cover;
+         height: 110%;
+         width: 100%;
+        }
+        h1 {
+            /* text-decoration: underline; */
+            font-weight: bolder;
+            color: #0cfdf4;
+            /* border: 2px solid whitesmoke; */
+            height: 63px;
+            width: 639px;
+            box-shadow: 1px 1px 555px rgb(134, 202, 244);
+        }
+
+        .pr {
+            background-color: #1c6fb6;
+    background-image: url(img/pics.png);
+    opacity: 0.89999;
+    display: inline-block;
+    color:rgb(70 85 128);
+    font-weight: bold;
+    font-size: 19px;
+    border: 3px solid rgb(6 76 110);
+    box-shadow: 5px 5px 20px rgb(6 19 35);
+    height: 602px;
+    width: 563px;
+    padding-top: 40px;
+    /* padding-bottom: 53px; */
+    padding-left: 42px;
+            height: 602px;
+    width: 563px;
+    padding-top: 40px;
+    /* padding-bottom: 53px; */
+    padding-left: 42px;
+
+        }
+
+        input[type="text"] {
+            margin-left: 24px;
+        }
+
+        input[type="email"] {
+            margin-left: 102px;
+        }
+
+        input[type="password"] {
+            margin-left: 24px;
+        }
+
+        input[type="submit"] {
+            font-size: 25px;
+            margin-left: -25px;
+        }
+
+        button {
+            font-size: 30px;
+        }
+
+        #fname {
+            margin-right: 39px;
+            display: flex;
+            /* text-align: center; */
+             /* justify-content: center;   */
+        }
+
+        #lname {
+            margin-right: 42px;
+            display: flex;
+            /* text-align: center; */
+             /* justify-content: center;   */
+        }
+
+        #email {
+            margin-right: 111px;
+            display: flex;
+            /* text-align: center; */
+             /* justify-content: center;   */
+        }
+
+        #pswd1 {
+            margin-right: 24px;
+            display: flex;
+            /* text-align: center; */
+             /* justify-content: center;   */
+        }
+
+        #pswd2 {
+            margin-right: 21px;
+            display: flex;
+            /* text-align: center; */
+             /* justify-content: center;   */
+        }
+    </style>
+</body>
+
+</html>

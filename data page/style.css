@@ -1,0 +1,596 @@
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Fascinate+Inline&family=Fredericka+the+Great&family=Gloria+Hallelujah&family=Nabla&family=Poiret+One&family=Source+Code+Pro:wght@500&display=swap');
+*
+{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    user-select: none;
+}
+html
+{
+    font-size: 9px;
+}
+.material-icons-round
+{
+    filter: drop-shadow(3px 5px 2px rgba(255, 255, 255, 0.4));
+}
+body
+{
+    min-height: 100vh;
+    background-size:cover;
+    background-position: fixed;
+    width:100%;
+    background-image: rgba(0, 0, 0, 0.345);
+    position:absolute;
+    padding: 0 5%;
+    display:flex;
+    align-items: center;
+    justify-content:center;
+}
+.bacv
+{
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+    height: auto;
+    background-repeat: repeat-y;
+}
+.container
+{
+    display: grid;
+    grid-template-columns: 0.9fr 1.5fr 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 0.5fr 0.6fr 1fr;
+    grid-template-areas:"navbar navbar  navbar navbar navbar"
+                        "sidebar header header header header"
+                        "sidebar card1 card2 card2 card2"
+                        "sidebar graph graph card3 card3";             
+    width:95%;
+    height:95vh;
+    border-radius: 10px;
+    padding: 3px;
+    backdrop-filter: blur(5px);
+}
+.container div
+{
+    margin: 4px;
+    border-radius: 5px;
+}
+.navbar
+{
+    grid-area: navbar;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.5) 0px 30px 60px -50px;
+}
+.sidebar
+{
+    grid-area: sidebar;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.5) 0px 30px 60px -30px;
+}
+.header
+{
+    grid-area: header;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+.card1
+{
+    grid-area: card1;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+.card2
+{
+    grid-area: card2;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+.card2 .bd
+{
+    display:grid;
+    grid-template-columns: .9fr .9fr .9fr;
+    grid-template-rows: .3fr;
+    background: none;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+.graph
+{
+    grid-area: graph;
+    box-shadow: 0 0 1px rgba(16, 16, 16, 0.5);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+.card3
+{
+    grid-area: card3;
+    box-shadow: rgba(54, 54, 86, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.614) 0px 30px 100px -30px;
+}
+button
+{
+    border: none;
+    background: none;
+}
+.container .navbar
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px 22.5px;
+    margin-top:7px;
+}
+.container .navbar .logo
+{
+    display: flex;
+    align-items: center;
+    background:0%;
+}
+.container .navbar .logo .logoname
+{
+    font-size: 35px;
+    margin-left: 9px;
+    font-weight: 500;
+    text-shadow: 5px 3px 2px rgba(0, 0, 0, 0.463);
+    font-family: 'Nabla', cursive;
+}
+.navbar .searchbox 
+{
+    position: relative;
+    font-weight: 800;
+    font-size: small;
+}
+.navbar .searchbox input 
+{
+    padding: 0.2rem 12rem 0.2rem 2rem;
+    border: none;
+    outline: none;
+    border-radius: 3rem;
+    transition: 0.3s;
+    font-size: 20px;
+    font-family: 'Cookie', cursive;
+}
+.navbar .searchbox input:focus
+{
+    background: #000;
+    color: #fff;
+    font-size: 22px;
+    padding: 0.5rem 18rem 0.5rem 2rem;
+}
+.searchbox input:focus::-webkit-input-placeholder
+{
+   color: #fff;
+}
+.navbar .searchbox .material-icons-round:hover
+{
+    transition: 0.3s;
+    transform: scale(1.2) rotate(360deg);
+    color: #fff;
+    border-radius: 50%;
+    box-shadow: 1px 1px 3px rgb(255, 255, 255);
+}
+.navbar .navitem 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar .navitem .icons
+{
+    position: relative;
+    right: 1.5rem;
+}
+.navbar .navitem .icons ul li
+{
+    position: relative;
+    display: inline-block;
+    font-size: 1.6rem;
+    margin: 0 1.2rem;
+}
+.navbar .navitem .icons ul li .material-icons-round:hover {
+    padding: 0.5rem;
+    color: #fff;
+    background: #000;
+    border-radius: 50%;
+    transition: 0.3s;
+    transform: scale(1.2) rotate(360deg);
+}
+.navbar .navitem .account
+{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.navbar .navitem .account img 
+{
+    border-radius: 50%;
+}
+#pic
+{
+    border-radius: 5px;
+    filter: drop-shadow(3px 5px 2px rgba(255, 255, 255, 0.4));
+}
+#pic:hover
+{
+    scale: 1.25;
+    transform: rotate(-20deg);
+}
+.navbar .navitem .account .name
+{
+    text-transform: capitalize;
+    margin: 0 0.8rem;
+    font-size: 15px;
+    font-weight: 500;
+    color: snow;
+    font-family: 'Fredericka the Great', cursive;
+    text-shadow: 1px 2px 3px rgb(255, 255, 255);
+}
+.navbar .navitem .account .username
+{
+    position: absolute;
+    top: 2rem;
+    left: 4rem;
+    font-size: 15px;
+    font-weight: 300;
+    color: white;
+    font-family: 'Fredericka the Great', cursive;
+    text-shadow: 1px 2px 3px rgb(255, 255, 255);
+}
+.sidebar
+{
+    padding-right: 0.5rem;
+}
+.sidebar .material-icons-round
+{
+    font-size: 25px;
+    padding: 0.5rem;
+}
+.sidebar ul li
+{
+    padding: 0.4rem;
+    margin: 1rem 0;
+    border-radius: 0.8rem;
+    width: auto;
+}
+.sidebar ul li a
+{
+    color: #000;
+    font-weight:500;
+    font-size: 12px;
+    text-decoration: none;
+    font-weight: 800;
+    font-family: 'Kalam', cursive;
+    color: aliceblue;
+}
+.sidebar ul li:hover
+{
+    background: url(picsp.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.sidebar ul li:hover a
+{
+    color: rgb(255, 255, 255);
+}
+.sidebar ul li:hover .material-icons-round
+{
+    color: #fff;
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+}
+.sidebar ul .dashboard
+{
+    color: #fff;
+    background: url(picsp.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+} 
+.sidebar ul .dashboard a { color: #fff;}
+.sidebar ul .dashboard .material-icons-round { color: #fff; }
+.header { position: relative; }
+.header .tittle
+{
+    position: absolute;
+    top: 1rem;
+    left: 2rem;
+}
+.header .tittle h1
+{
+    text-transform: capitalize;
+    font-size: 30px;
+    color: #fff;
+    font-weight: 300;
+    font-family: 'Fredericka the Great', cursive;
+    text-shadow: 1px 2px 3px rgb(255, 255, 255);
+}
+.header .tittle h4
+{
+    font-family: 'Poiret One', cursive;
+    font-size: 15px;
+    color: #fff;
+    font-weight: 600;
+    text-shadow: 2px 3px 4px rgb(0, 0, 0);
+}
+.card1 
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Fascinate Inline', cursive;
+    background-image: url(piccl.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.time
+{
+    padding-bottom:15px;
+    font-weight:lighter;
+}
+.card1 .clock
+{
+    padding:2px;
+    backdrop-filter: blur(3px);
+    width: 80%;
+    height: 80%;
+    color: azure;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    gap:1px;
+    position: relative;
+}
+.details
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap:3px;
+}
+.date
+{
+    font-size: 20px;
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align:center;
+}
+@media screen and (min-width:1000px)
+{
+    .time{ font-size: 4em;}
+}
+@media screen and (min-width:500px)
+{
+    .clock{ font-size: 13px;}
+}
+.card2
+{
+    font-family: 'Fredericka the Great', cursive;
+    color: azure;
+    text-shadow: 1px 3px 3px rgb(255, 255, 255);
+}
+.card2 h1
+{
+    font-size: 25px;
+    font-weight: 500;
+}
+.card2 .bd { font-size: 15px;}
+.graph
+{ position: relative;}
+.graph h2
+{
+    font-size: 30px;
+    padding-left: 10px;
+    padding-top: 3px;
+    font-weight: 400;
+    font-family: 'Fredericka the Great', cursive;
+    text-shadow: 1px 2px 4px rgb(255, 255, 255);
+    color: aliceblue;
+}
+.graph .chart
+{
+    width: 100%;
+    border-radius: 1.4rem;
+}
+.chart ul
+{
+    position: absolute;
+    transform: translate(100%,15%);
+}
+.chart ul li
+{
+    padding-bottom: 4px;
+    text-align: center;
+    font-size: 12px;
+    font-family: sans-serif;
+    color: white;
+    font-weight: 600;
+    font-family: 'Source Code Pro', monospace;
+}
+.chart .box li
+{
+    position: absolute;
+    transform: translate(-100%,80%);
+    width: 2rem;
+    height: 9rem;
+    border-radius: 0.8rem;
+    box-shadow: 13px 13px 10px #0000004f, -10px -10px 40px #000000;
+}
+.chart .box li:nth-child(1)
+{ left: 13rem; }
+.chart .box li:nth-child(2)
+{ left: 20rem; }
+.chart .box li:nth-child(3)
+{ left: 27rem; }
+.chart .box li:nth-child(4)
+{ left: 35rem; }
+.chart .box li:nth-child(5)
+{ left: 43rem; }
+.chart .box li:nth-child(6)
+{ left: 51rem; }
+.chart .box li:nth-child(7)
+{ left: 59rem;}
+.chart .box li .text 
+{
+    position: absolute;
+    bottom: -2.5rem;
+    left: -0.5rem;
+    width: 8rem;
+    color: white;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    font-family: 'Source Code Pro', monospace;
+}
+.chart .box li:before
+{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: #33cc33;
+    border-radius: 0.6rem;
+    animation: bar 10s linear infinite;
+    animation-delay: calc(-2s * var(--i));
+}
+@keyframes bar
+{
+    0% {  height: 80%; filter: hue-rotate(180deg);}
+    50% {height: 0;}
+    100% { height: 80%; filter: hue-rotate(0);}
+}
+#nt
+{
+    background: rgba(255, 255, 255, 0.068);
+    backdrop-filter: blur(5px);
+    padding: 4px;
+}
+.card3 h1
+{
+    font-size: 25px;
+    padding-left: 10px;
+    padding-top: 3px;
+    font-weight: 500;
+    font-family: 'Fredericka the Great', cursive;
+    text-shadow: 1px 2px 3px rgb(255, 255, 255);
+    color: aliceblue;
+}
+.card3 textarea::placeholder
+{
+    color: aliceblue;
+    font-family: 'Satisfy', cursive;
+    font-size: small;
+    align-content: center;
+}
+.card3 textarea
+{
+    color: aliceblue;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: small;
+    align-content: center;
+    height: 25px;
+}
+@media screen and (max-width: 1024px)
+{
+    html { font-size: 8.5px;}
+}
+@media screen and (max-width: 920px)
+{
+    html { font-size: 8px;}
+}
+@media screen and (max-width: 840px)
+{
+    html { font-size: 7px;}
+} 
+@media screen and (max-width: 768px) 
+{
+    html { font-size: 9px;}
+    .bacv{ display: none;}
+    body{
+        background: url(leaf.jpg);
+        background-size:cover;
+    }
+    .navbar .searchbox input:focus { padding: 0.8rem 12rem 0.8rem 2rem;}
+    .container
+    {
+      display: grid;
+      height: auto;
+      width: auto;
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.5fr 0.5fr 1fr 0.6fr 0.6fr 1.2fr 1fr;
+      grid-template-areas:"navbar" "sidebar" "header" "card1" "card2" "graph" "card3";
+    }
+    .container .navbar 
+    {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+    .toggle  {display: none;}
+    .dashboard {position: relative;}
+    .togglebtn
+    {
+        position: absolute;
+        top: 0.2rem;
+        right: 0.2rem;
+        width: 3.3rem;
+        height: 3.3rem;
+        background: #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .togglebtn:before
+    {
+        content: "";
+        position: absolute;
+        width: 2rem;
+        height: 0.2rem;
+        background: #fff;
+        transform: translateY(-6px);
+        box-shadow: 0 6px 0 #fff;
+        transition: 0.3s;
+    }
+    .togglebtn.active:before 
+    {
+        transform: translateY(0) rotate(40deg);
+        box-shadow: 0 0 0 #fff;
+    }
+    .togglebtn:after
+    {
+        content: "";
+        position: absolute;
+        width: 2rem;
+        height: 0.2rem;
+        background: #fff;
+        transform: translateY(6px);
+        transition: 0.3s;
+    }
+    .togglebtn.active:after 
+    {  transform: translateY(0) rotate(-40deg); }
+    .graph { overflow: scroll; }
+}
+@media screen and (max-width: 385px)
+{
+      html { font-size: 8px;}
+      .graph .status { top: 2rem;}
+      .container .div { width: 100%;}
+}
+@media screen and (max-width: 340px)
+{
+    html { font-size: 7px;}
+}
+@media screen and (max-width: 50px)
+{
+    html { font-size: 5px;}
+    .container .div {width: 100%;}
+}
+@media (min-aspect-ratio:16/9)
+{
+    .bacv{
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-aspect-ratio:16/9)
+{
+    .bacv{
+        width: auto ;
+        height: 100%;
+    }
+}
