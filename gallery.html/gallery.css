@@ -30,18 +30,18 @@ h1{
     font-size: 40px;
     position: relative;
     margin: 40px 0;
-     color:black; 
+    color:black; 
     animation: animation 3s infinite;
 }
 @keyframes animation{
-    0%{color:red};
-    25%{color:blueviolet};
-    50%{color:pink};
+    0%{color:rgb(170, 0, 255)};
+    25%{color:rgb(43, 180, 226)};
+    50%{color:rgb(0, 255, 89)};
 }
 h1::before{
     content:'';
     position: absolute;
-    width:100px;
+    width:200px;
     height: 3px;
     background-color: palevioletred; 
     bottom: -10px;
@@ -66,14 +66,14 @@ h1:hover{
     align-items: center;
     border-radius: 8px;
     box-shadow: 3px 3px 5px yellow;
-    background-image:linear-gradient(rgb(238, 80, 238),pink);
+    background-image:linear-gradient(rgb(0, 98, 255),rgb(52, 204, 255));
 }
 h3{
     background-color: rgb(red, green, blue);
     height: 100%;
     line-height: 60px;
     padding: 0 50px;
-    color:rgb(6, 166, 230);
+    color:rgb(0, 0, 0);
     font-size: 20px;
 }
 h3:hover{
@@ -86,7 +86,7 @@ label{
     margin: 0 20px;
     line-height:60px;
     font-size:20px;
-    color:green;
+    color:rgb(251, 255, 0);
     cursor: pointer;
     transition:color .5s;
 }
