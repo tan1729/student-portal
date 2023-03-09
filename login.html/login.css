@@ -32,7 +32,6 @@ body{
 }
 
 
-
 #d44{
    
     font-size: 40px;
@@ -66,10 +65,14 @@ input{
     
     }
     
-    #d9{
+    .submit{
+        font-size: 25px;
+        font-weight: bolder;
+        color: azure;
         margin-top: 45px;
        margin-left: 80px;
-         
+        font-family: 'Times New Roman', Times, serif;
+        font-size: large;
         background: linear-gradient(to right,#6800b3,#8600e6, #b54dff, #d499ff, #cc9fec);
         height: 40px;
         width: 180px;
@@ -78,22 +81,17 @@ input{
         text-align: center;
         box-shadow: inset 0 0 18px -1px #5230d8;
         box-shadow: 0 0 15px -2px #5230d8;
-    }
-    a{
-        font-size: 25px;
-        font-weight: bolder;
-        color: azure;
-        
         
         text-decoration: none;
         
         
 
     }
-    #d9:hover{
+    .submit:hover{
         background: linear-gradient(to right,#009900,#05bd05,#52c652,#71e171,#82f982ed);
         box-shadow: inset 0 0 18px -1px #009900;
         box-shadow: 0 0 15px -2px #009900;
+        cursor: pointer;
     }
 #d10 {
     text-align: right;

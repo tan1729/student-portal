@@ -2,7 +2,6 @@
 
 <head>
     <title> Validate Password </title>
-    <link rel="shortcut icon" href="Logo_IIITL.png"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
 </head>
@@ -61,30 +60,36 @@
 </script>
 
 <body>
+    <script src="register.js"></script>
     <center>
 
-        <h1> Registration Page To Student Portal </h1> <br><br>
+        <div class="pp">
+            <h1> Registration Page To Student Portal </h1> <br><br>
+        </div>
+        <div class="alert-box">
+            <p class="alert"></p>
+        </div>
         <div class="pr">
             <form onsubmit="return validateForm()">
 
 
                 <td> Full Name* </td>
-                <input type="text" id="fname" pattern="[A-Za-z]+$" value="" placeholder="enter first name">
+                <input type="text" id="fname" class="fname" pattern="[A-Za-z]+$" value="" placeholder="enter first name">
                 <span id="blankMsg" style="color:red"> </span> <br><br>
 
 
                 <td> Last Name </td>
-                <input type="text" id="lname" pattern="[A-Za-z]+$" value="" placeholder="enter last name">
+                <input type="text" id="lname" class="lname" pattern="[A-Za-z]+$" value="" placeholder="enter last name">
                 <span id="charMsg" style="color:red"> </span> <br><br>
 
 
                 <td>Email</td>
-                <input type="email" id="email" pattern=" ([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$"
+                <input type="email" id="email" class="email" pattern=" ([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$"
                     size="19" required placeholder="enter your email"><br><br>
 
 
                 <td> Create Password* </td>
-                <input type="password" id="pswd1" value="" placeholder="enter password">
+                <input type="password" id="pswd1" class="password" value="" placeholder="enter password">
                 <span id="message1" style="color:red"> </span> <br><br>
 
 
@@ -94,6 +99,7 @@
 
 
                 <input type="submit" value="SIGN UP" class="btn btn-primary">
+                <input type="button" value="LOG IN" class="btn btn-primary">
 
                 <!-- <button type="reset" value="Reset">Reset</button> -->
             </form>
@@ -101,16 +107,18 @@
     </center>
 
     <style>
-        body{
-            background-image: url('img/pic44.png');
+        body {
+            background-image: url('pic44.jpg');
             /* display: inline-block; */
             background-repeat: no-repeat;
-         /* border-image-width: 5000px ; */
-         object-fit: cover;
-         background-size:cover;
-         height: 110%;
-         width: 100%;
+            /* border-image-width: 5000px ; */
+            object-fit: cover;
+            background-size: cover;
+            height: 120%;
+            width: 100%;
+            font-family: van;
         }
+
         h1 {
             /* text-decoration: underline; */
             font-weight: bolder;
@@ -119,28 +127,28 @@
             height: 63px;
             width: 639px;
             box-shadow: 1px 1px 555px rgb(134, 202, 244);
+            margin-bottom: -57px;
+            padding-top: -2px;
         }
 
         .pr {
             background-color: #1c6fb6;
-    background-image: url(img/pics.png);
-    opacity: 0.89999;
-    display: inline-block;
-    color:rgb(70 85 128);
-    font-weight: bold;
-    font-size: 19px;
-    border: 3px solid rgb(6 76 110);
-    box-shadow: 5px 5px 20px rgb(6 19 35);
-    height: 602px;
-    width: 563px;
-    padding-top: 40px;
-    /* padding-bottom: 53px; */
-    padding-left: 42px;
-            height: 602px;
-    width: 563px;
-    padding-top: 40px;
-    /* padding-bottom: 53px; */
-    padding-left: 42px;
+            background-image: url(img1.jpg);
+            opacity: 0.89999;
+            display: inline-block;
+            color: rgb(1 12 27);
+            font-weight: bold;
+            font-size: 19px;
+            border: 3px solid rgb(6 76 110);
+            box-shadow: 5px 5px 20px rgb(6 19 35);
+            padding-top: 40px;
+            /* padding-bottom: 53px; */
+            padding-left: 42px;
+            height: 660px;
+            width: 563px;
+            padding-top: 40px;
+            /* padding-bottom: 53px; */
+            padding-left: 42px;
 
         }
 
@@ -158,7 +166,18 @@
 
         input[type="submit"] {
             font-size: 25px;
-            margin-left: -25px;
+            /* margin-left: -25px; */
+            margin: -50px;
+            /* margin-left: 80px;
+            margin-right: 68px; */
+        }
+
+        input[type="button"] {
+            font-size: 25px;
+            /* margin-left: -25px; */
+            margin: -50px;
+    margin-left: 125px;
+    margin-right: -22px;
         }
 
         button {
@@ -169,35 +188,35 @@
             margin-right: 39px;
             display: flex;
             /* text-align: center; */
-             /* justify-content: center;   */
+            /* justify-content: center;   */
         }
 
         #lname {
             margin-right: 42px;
             display: flex;
             /* text-align: center; */
-             /* justify-content: center;   */
+            /* justify-content: center;   */
         }
 
         #email {
             margin-right: 111px;
             display: flex;
             /* text-align: center; */
-             /* justify-content: center;   */
+            /* justify-content: center;   */
         }
 
         #pswd1 {
             margin-right: 24px;
             display: flex;
             /* text-align: center; */
-             /* justify-content: center;   */
+            /* justify-content: center;   */
         }
 
         #pswd2 {
             margin-right: 21px;
             display: flex;
             /* text-align: center; */
-             /* justify-content: center;   */
+            /* justify-content: center;   */
         }
     </style>
 </body>
