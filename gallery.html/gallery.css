@@ -204,3 +204,13 @@ transform: scale(0);
 position: absolute;
 transition: 0s;
 }
+form{
+    display: flex;
+    justify-content: right;
+}
+  
+input{
+    padding: 20px;
+    width: 160px;
+    height: 40px;
+}

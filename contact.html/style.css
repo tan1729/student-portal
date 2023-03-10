@@ -208,3 +208,13 @@ body {
 	}
 
 }
+.home{
+	display: flex;
+	justify-content: right;
+}
+  
+.home input{
+	padding: 20px;
+	width: 160px;
+	height: 40px;
+}
