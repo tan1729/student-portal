@@ -2,7 +2,9 @@
 
 ## Introduction
 
-Welcome to the Student Portal project! This web application was developed by a team of seven members and is designed to provide students with a user-friendly platform to access academic resources, course materials, and other essential information.
+Welcome to the Student Portal project! This web application was developed by a team of seven members and is designed to provide students with a user-friendly platform to manage student profile, course details, time tables and schedules.
+
+![Student Portal](index.html/Preview.png)
 
 ## Table of Contents
 
