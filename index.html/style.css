@@ -181,8 +181,13 @@ nav ul li a:hover{
 }
 
 .main-login:hover{
-    background-color: #F14D5D;
-    transition: all ease 0.3s;
+    /* background-color: #d0f39c; */
+    border-radius: 5px;
+    background-color: #198645;
+    color:#fff;
+    box-shadow: 5px 10px 30px rgb(7, 80, 38);
+    transition: 0.2s;
+    /* transition: all ease 0.3s; */
 }
 
 .arrows {
